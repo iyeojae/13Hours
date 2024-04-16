@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta
+      name="author"
+      content="Mark Otto, Jacob Thornton, and Bootstrap contributors"
+    />
+    <meta name="generator" content="Hugo 0.84.0" />
+    <title>Blog Template · Bootstrap v5.0</title>
+
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.0/examples/blog/"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .custom-img {
+        width: 200px; /* 원하는 너비(px) 설정 */
+        height: auto; /* 비율 유지를 위해 높이는 자동으로 조정됩니다 */
+      }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles for this template -->
+    <link href="blog.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <!-- <a class="link-secondary" href="#">Subscribe</a> -->
+          </div>
+          <div class="col-4 text-center">
+            <!-- <a class="blog-header-logo text-dark" href="#">Large</a> -->
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="link-secondary" href="#" aria-label="Search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="mx-3"
+                role="img"
+                viewBox="0 0 24 24"
+              >
+                <title>Search</title>
+                <circle cx="10.5" cy="10.5" r="7.5" />
+                <path d="M21 21l-5.2-5.2" />
+              </svg>
+            </a>
+            <a class="btn btn-sm btn-outline-secondary" href="#"
+              >You don't need to Sign up</a
+            >
+          </div>
+        </div>
+      </header>
+
+      <!-- <div class="nav-scroller py-1 mb-2">
+        <nav class="nav d-flex justify-content-between">
+          <a class="p-2 link-secondary" href="#">World</a>
+          <a class="p-2 link-secondary" href="#">U.S.</a>
+          <a class="p-2 link-secondary" href="#">Technology</a>
+          <a class="p-2 link-secondary" href="#">Design</a>
+          <a class="p-2 link-secondary" href="#">Culture</a>
+          <a class="p-2 link-secondary" href="#">Business</a>
+          <a class="p-2 link-secondary" href="#">Politics</a>
+          <a class="p-2 link-secondary" href="#">Opinion</a>
+          <a class="p-2 link-secondary" href="#">Science</a>
+          <a class="p-2 link-secondary" href="#">Health</a>
+          <a class="p-2 link-secondary" href="#">Style</a>
+          <a class="p-2 link-secondary" href="#">Travel</a>
+        </nav>
+      </div> -->
+    </div>
+
+    <main class="container">
+      <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <div class="col-md-6 px-0">
+          <h1 class="display-4 fst-italic">JY HOMEPAGE</h1>
+          <p class="lead my-3">내가 사랑하는 것들만 담아서!</p>
+          <p class="lead mb-0">
+            <!-- <a href="#" class="text-white fw-bold">Continue reading...</a> -->
+          </p>
+        </div>
+      </div>
+
+      <div class="row mb-2">
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-primary">House</strong>
+              <h3 class="mb-0">미호를 소개할게요</h3>
+              <div class="mb-1 text-muted">July 14th</div>
+              <p class="card-text mb-auto">
+                미호는 내가 세상에서 제일 아끼는 보물 1호야. 내 동생이자 우리집
+                막내야. 2022년 7월 14일에 데려왔고, 여우를 닮아서 미호라고 이름
+                지어줬어! 어때, 어울려?
+              </p>
+              <br />
+              <!-- <a href="#" class="stretched-link">Continue reading</a> -->
+              <button
+                type="button"
+                class="btn btn-primary position-relative"
+                onclick="location.href = 'https://www.instagram.com/im_yu_miho/' "
+              >
+                Miho's Instagram
+                <span
+                  class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
+                >
+                  <span class="visually-hidden">New alerts</span>
+                </span>
+              </button>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                img
+                src="../assets/images/miho.jpg"
+                width="100%"
+                height="100%"
+                class="custom-img bd-placeholder-img"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div
+            class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative"
+          >
+            <div class="col p-4 d-flex flex-column position-static">
+              <strong class="d-inline-block mb-2 text-success">ESTP</strong>
+              <h3 class="mb-0">저를 소개할게요</h3>
+              <div class="mb-1 text-muted">Oct 20th</div>
+              <p class="mb-auto">
+                안녕, 내 이름은 유지영이야. 나는 카페, 런닝, 음악과 악기, 동물,
+                위스키, 인위적이지 않은 향기를 좋아해. 언젠가 나도 멋진 향기를
+                가진 개발자가 될거야.
+              </p>
+              <br />
+              <!-- <a href="#" class="stretched-link">Continue reading</a> -->
+              <button
+                type="button"
+                class="btn btn-primary position-relative"
+                onclick="location.href = 'https://github.com/bbackbbacke' "
+              >
+                git
+                <span
+                  class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle"
+                >
+                  <span class="visually-hidden">New alerts</span>
+                </span>
+              </button>
+            </div>
+            <div class="col-auto d-none d-lg-block">
+              <img
+                img
+                src="../assets/images/유지영.jpeg"
+                width="100%"
+                height="100%"
+                class="custom-img bd-placeholder-img"
+              />
+              <!-- <svg -----***********이따 삭제하고 이미지 넣어야 할 부분
+                class="bd-placeholder-img"
+                width="200"
+                height="250"
+                xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Placeholder: Thumbnail"
+                preserveAspectRatio="xMidYMid slice"
+                focusable="false"
+              >
+    
+                <rect width="100%" height="100%" fill="#55595c" />
+                <text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text>
+              </svg> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-5">
+        <div class="col-md-8">
+          <!-- <h3 class="pb-4 mb-4 fst-italic border-bottom"> </h3> -->
+
+          <article class="blog-post">
+            <h2 class="blog-post-title">What I like</h2>
+            <p class="blog-post-meta">April 19, 2024 by <a>JY</a></p>
+            저의 블로그니까 제가 사랑해 마지 않는 것들을 소개해볼게요!
+            <hr />
+            <h2>Scent / Perfume</h2>
+            <p>
+              저는 향으로 사람을 기억하는 것을 좋아해요. 제가 찾아낸 사람들의
+              멋진 향기를 공유할게요! 사용하고 지나간다면 다른 사람은 몰라도
+              저는 무조건 돌아보게 될거예요.
+            </p>
+            <!-- <p>This is an example blockquote in action:</p> -->
+            <blockquote class="blockquote">
+              <strong>산타마리아노벨라 프리지아 오 드 코롱</strong>
+            </blockquote>
+            <p>
+              오랜만에 대학교에서 마주친 친구에게서 언젠가부터 나던 향기예요.
+              꽃향은 장미를 제외하면 가리지 않고 좋아하는 것 같아요. 무더운
+              여름에 어울리는 향기.
+              <br />
+              탑노트 : 프리지아 <br />
+              미들노트 : 바이올렛, 캐비지로즈 앱솔루트 <br />
+              베이스노트 : 아이리스 머스크
+              <!-- ****************들여쓰기/css추가******************* -->
+            </p>
+
+            <blockquote class="blockquote">
+              <strong>딥디크 필로시코스 오 드 퍼퓸</strong>
+            </blockquote>
+            <p>
+              대학교 기숙사 첫 룸메이트가 쓰던 향수예요. 뿌리고 나면 엄청
+              묵직하고 파우더리한데 시간 지나면 지날 수록 고소하고 달달한
+              코코넛향이 우디향과 겹쳐 나서 자꾸만 그리운 향. 무거운 만큼 추운
+              겨울에 어울리는 향기. 매력적인 무화과 향을 처음 알게 됐어요.
+              <br />
+              탑노트 : 무화과 잎, 무화과 <br />
+              미들노트 : 코코넛, 그린노트 <br />
+              베이스노트 : 시더우드, 우디노트, 무화과 나무
+              <!-- ****************들여쓰기/css추가******************* -->
+            </p>
+            <br />
+            <hr />
+            <h2>Songs</h2>
+            <p>
+              저는 노래 하나에 빠지면 하루 종일 며칠 동안 그 노래만 들어요. 그
+              중에서도 가장 좋아하는 노래들을 소개할게요.
+            </p>
+            <!-- <p>This is an example blockquote in action:</p> -->
+            <blockquote class="blockquote">
+              <p>MILLIC - CAN'T WAIT(Feat.(((o))))</p>
+            </blockquote>
+
+            <blockquote class="blockquote">
+              <p>Wave to earth - surf.</p>
+            </blockquote>
+
+            <blockquote class="blockquote">
+              <p>Dean - love</p>
+            </blockquote>
+
+            <blockquote class="blockquote">
+              <p>Meego - moonmap</p>
+            </blockquote>
+
+            <blockquote class="blockquote">
+              <p>신스틸러 - 가을냄새</p>
+            </blockquote>
+
+            <blockquote class="blockquote">
+              <p>4cm (Feat. Wilcox) - Boni</p>
+            </blockquote>
+          </article>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
