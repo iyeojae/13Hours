@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
     <link rel="stylesheet" href="../main/docs.css">
     <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://kit.fontawesome.com/c2643f8114.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../main/animate.css" />
     <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
@@ -22,11 +24,13 @@
             font-weight: 400;
             font-style: normal;
         }
+
         .fo1 {
             font-family: "East Sea Dokdo", sans-serif;
             font-weight: 400;
             font-style: normal;
         }
+
         .fo {
             font-family: "Nanum Pen Script", cursive;
             font-weight: 400;
@@ -47,6 +51,12 @@
                 case "서산 해미 롯데리아" : $('#work').text("여기는 시골 중에 시골에 있는 롯데리아라 그런지 더욱더 정이 많은.. 사장님 부모님분들하고 일해서 더더욱 정이 느껴진 듯한 느낌..(?)"); break;
             }
         }
+        window.addEventListener('load', function () {
+            const targetEl = document.querySelector('.animate__hinge');
+            targetEl.addEventListener('animationend', (event) => {
+                location.href = '../main/game.html'
+            });
+        });
     </script>
 
 </head>
@@ -76,7 +86,14 @@
                     </li>
                     <li><span class = "fo" style="font-size : 25px">팀 소개 페이지</span>
                         <ul>
-                            <li><a class = "fo" style="font-size : 20px" href="../main/index.html" target="_blank">이동!</a></li>
+                            <li><a class = "fo animate__rollOut animate__animated" style="font-size : 20px" href="../main/index.html" target="_blank">이동!</a></li>
+                        </ul>
+                    </li>
+                    <li><span class = "fo" style="font-size : 25px">기타 등등</span>
+                        <ul>
+                            <li><a class = "fo animate__rollOut animate__animated" style="font-size : 20px" href="https://www.instagram.com/iyeojae1/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram </a></li>
+                            <li><a class = "fo animate__rollOut animate__animated" style="font-size : 20px" href="https://github.com/iyeojae" target="_blank"><i class="fa-brands fa-github"></i> Git</a></li>
+                            <li><a class = "fo animate__rollOut animate__animated" style="font-size : 20px" href="https://velog.io/@iyeojae1/posts" target="_blank"><i class="fa-brands fa-blogger-b"></i> Blog</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -84,14 +101,14 @@
         </aside>
         <p class="col col-complementary" role="complementary">
         <div class="standard-dialog">
-            <p class="heading center">Introduce my self</p>
-        <p class="desc center" >-Should I start introducing myself properly?-</p>
+            <p class="heading center animate__animated animate__hinge">Introduce my self</p>
+        <p class="desc center anim-typewriter line-1" >-Should I start introducing myself properly?-</p>
 
-            <p class = "fo" id="intro" style="font-size : 55px">Intro</p>
-            <p class = "fo" style="font-size : 25px" >마냥 사납지만은 않지만 귀엽고 온순한 사자 한마리가 이 페이지를 작성함.</p>
+            <p class = "fo anim-typewriter line-1" id="intro" style="font-size : 55px">Intro</p>
+            <p class = "fo anim-typewriter line-1" style="font-size : 25px" >마냥 사납지만은 않지만 귀엽고 온순한 사자 한마리가 이 페이지를 작성함.</p>
         <div>
         </div>
-            <p class = "fo" style="font-size : 55px">나의 모든것..</p>
+            <p class = "fo anim-typewriter line-1" style="font-size : 55px">나의 모든것..</p>
 
             <section class="component">
                 <p class="fo" style="font-size : 45px">학력</p>
