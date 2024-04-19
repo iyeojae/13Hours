@@ -1,12 +1,133 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap');
+
+        .nanum-brush script-regular {
+            font-family: "Nanum Brush Script", cursive;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .imgcontainer {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px 0px 0px 10px
+        }
+
+        .top {
+            
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .maintitle {
+            font-family: "Nanum Brush Script";
+            font-size: 50px;
+        }
+
+        .iconimg {
+
+            width: 100px;
+            height: 100px;
+            border-radius: 70%;
+
+        }
+
+        .iconname {
+            font-family: "Nanum Brush Script";
+            font-size: large;
+        }
+        .homecontainer{
+            
+            height: 130px;
+            margin: 0px 10px 0px 0px;
+        }
+
+        a {
+            text-decoration-line: none;
+            color: inherit;
+        }
+        .cardcontainer {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin: 50px 0px 0px 0px;
+        }
+
+        .title {
+            margin: 0px 0px 0px 128px;
+        }
+    
+    </style>
 </head>
+
 <body>
-    jaewon page
+   
+
+    <div class="top">
+        <div class="imgcontainer">
+            <img class="iconimg" src="../assets/images/jaewon1.jpg">
+            <span class="iconname">사장 최재원</span>
+            <div class="button">
+                <button onclick = "location.href = 'https://github.com/jaewonchoi1234' ">github</button>
+                <button onclick = "location.href = 'https://jwjw123.tistory.com' ">tistory</button>
+            </div>
+        </div>
+        <span class="maintitle">저를 소개합니다.</span>
+        <div class="homecontainer"><a href="index.html">Home</a></div>
+        
+    </div>
+
+    <hr>
+
+    <div class="cardcontainer">
+        <div class="card" style="width: 18rem;">
+            <span class="title">mbti</span>
+            <img src="../assets/images/jaewon4.jpg" class="card-img-top" width="150" height="300">
+            <div class="card-body">
+                <p class="card-text">제 mbti는 INFP 입니다. 그러나 f와 t가 반반 비율이라 가끔씩 INTP가 나올때도 있습니다.</p>
+            </div>
+
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <span class="title">대학</span>
+            <img src="../assets/images/jaewon5.jpg" class="card-img-top" width="150" height="300">
+            <div class="card-body">
+                <p class="card-text">저는 부경대학교 컴퓨터공학과를 졸업했습니다. 전공자지만 프로젝트 경험이 없어서 해당 캠프에 참여하였습니다.</p>
+            </div>
+
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <span class="title">취미</span>
+            <img src="../assets/images/jaewon3.jpg" class="card-img-top" width="150" height="300">
+            <div class="card-body">
+                <p class="card-text">제 취미는 게임하기, 영화보기, 등산하기 등이 있습니다. 등산은 최근에 입문해서 종종 다니고 있습니다. </p>
+            </div>
+        </div>
+    </div>
+
+
+    
 
 </body>
+
 </html>

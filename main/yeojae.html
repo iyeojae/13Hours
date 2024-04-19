@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>system.css | A design system for building retro Apple-inspired interfaces</title>
+    <title> YEOJAE LEE - Introduce my self </title>
     <link rel="Shortcut Icon" type="image/x-icon" href="icon.png" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
     <meta property="og:title" content="system.css" />
     <meta name="Description" content="A design system for building retro Apple interfaces" />
     <meta property="og:description" content="A design system for building retro Apple interfaces" />
 
     <link rel="stylesheet" href="https://unpkg.com/@sakun/system.css" />
     <link rel="stylesheet" href="../main/docs.css">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://kit.fontawesome.com/c2643f8114.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../main/animate.css" />
+    <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Noto+Sans+KR:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+        .fo2 {
+            font-family: "Do Hyeon", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
 
-        .nanum-pen script-regular {
+        .fo1 {
+            font-family: "East Sea Dokdo", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .fo {
             font-family: "Nanum Pen Script", cursive;
             font-weight: 400;
             font-style: normal;
         }
     </style>
+
+    <script>
+        function chageLangSelect(){
+            var langSelect = document.getElementById("selectbox");
+            var selectText = langSelect.options[langSelect.selectedIndex].text;
+            console.log(selectText)
+
+            switch (selectText) {
+                case "태권도 사범" : $('#work').text("애기들 좋아하는 편이라면,, 강추 드립니다..ㅎㅎ 살짝 힘빠질때도 많았지만 하다보면 익숙해져요 ㄹㅇ.."); break;
+                case "OO갈비탕집" : $('#work').text("생각하기도 싫어요.. 사장 아들이랑 대판 싸우고 나와서 자세한 내용은... 직접 물어봐요 저한테..."); break;
+                case "서산 한남동그집" : $('#work').text("본가보다 인구수도 적고 시골이라서 그런지 정이 되게 많은 게 느껴진,,,(?) 알바였던거 같은데.. 아쉽게도 첫차 이슈로 인하여 그만둔 알바.."); break;
+                case "서산 해미 롯데리아" : $('#work').text("여기는 시골 중에 시골에 있는 롯데리아라 그런지 더욱더 정이 많은.. 사장님 부모님분들하고 일해서 더더욱 정이 느껴진 듯한 느낌..(?)"); break;
+            }
+        }
+        window.addEventListener('load', function () {
+            const targetEl = document.querySelector('.animate__hinge');
+            targetEl.addEventListener('animationend', (event) => {
+                location.href = '../main/game.html'
+            });
+        });
+    </script>
 
 </head>
 <body ontouchstart>
@@ -30,902 +67,268 @@
         <aside class="window sidebar">
             <div class="title-bar">
                 <button aria-label="Close" class="close"></button>
-                <h1 class="title" id = "nanum-pen">개인 페이지</h1>
+                <h1 class="title"><span class = "fo">개인 페이지</span></h1>
                 <button aria-label="Resize" class="resize"></button>
             </div>
             <div class="separator"></div>
             <div class="window-pane">
                 <ul class="menu-items">
-                    <li><a href="#intro">Intro</a></li>
-                    <li>나의 모든것..
+                    <li><a class = "fo" href="#intro" style="font-size : 25px">Intro</a></li>
+                    <li><span class = "fo" style="font-size : 25px">나의 모든것..</span>
                         <ul>
-                            <li><a href="#buttons">학력</a></li>
-                            <li><a href="#radio-buttons">나의 목표</a></li>
-                            <li><a href="#checkboxes">취미 생활</a></li>
-                            <li><a href="#menu-bar">먹을거리</a></li>
-                            <li><a href="#select-menu">알바 해본거</a></li>
-                            <li><a href="#text-box">인생 일대기</a></li>
+                            <li><a class = "fo" href="#buttons" style="font-size : 20px">학력</a></li>
+                            <li><a class = "fo" href="#radio-buttons" style="font-size : 20px">나의 목표</a></li>
+                            <li><a class = "fo" href="#checkboxes" style="font-size : 20px">취미 생활</a></li>
+                            <li><a class = "fo" href="#menu-bar" style="font-size : 20px">먹을거리</a></li>
+                            <li><a class = "fo" href="#select-menu" style="font-size : 20px">알바 해본거</a></li>
+                            <li><a class = "fo" href="#text-box" style="font-size : 20px">인생 일대기</a></li>
                         </ul>
                     </li>
-                    <li>팀 소개 페이지
+                    <li><span class = "fo" style="font-size : 25px">팀 소개 페이지</span>
                         <ul>
-                            <li><a href="../main/index.html" target="_blank">이동!</a></li>
+                            <li><a class = "fo animate__rollOut animate__animated" style="font-size : 20px" href="../main/index.html" target="_blank">이동!</a></li>
+                        </ul>
+                    </li>
+                    <li><span class = "fo" style="font-size : 25px">기타 등등</span>
+                        <ul>
+                            <li><a class = "fo animate__rollOut animate__animated" style="font-size : 20px" href="https://www.instagram.com/iyeojae1/" target="_blank"><i class="fa-brands fa-instagram"></i> Instagram </a></li>
+                            <li><a class = "fo animate__rollOut animate__animated" style="font-size : 20px" href="https://github.com/iyeojae" target="_blank"><i class="fa-brands fa-github"></i> Git</a></li>
+                            <li><a class = "fo animate__rollOut animate__animated" style="font-size : 20px" href="https://velog.io/@iyeojae1/posts" target="_blank"><i class="fa-brands fa-blogger-b"></i> Blog</a></li>
                         </ul>
                     </li>
                 </ul>
             </div>
         </aside>
-
-        </p>
         <p class="col col-complementary" role="complementary">
         <div class="standard-dialog">
-            <p class="heading center">Introduce my self</p>
-            <p class="desc center">제대로 된 제 소개를 시작해볼까요? -Should I start introducing myself properly?</p>
+            <p class="heading center animate__animated animate__hinge">Introduce my self</p>
+        <p class="desc center anim-typewriter line-1" >-Should I start introducing myself properly?-</p>
 
-            <h2 class="subheading" id="intro">Intro</h2>
-            <p>System.css is a CSS library for building interfaces that resemble Apple's System OS which ran from 1984-1991. Design-wise, not much really changed from System 1 to System 6; however this library is based on System 6 as it was the final monochrome version of MacOS.</p>
-
-            <p>Fortunately, this library does not use any JavaScript and is compatible with any front-end framework of your choice. Most styles can also be overwritten to allow for deeper customization.</p>
-
-            <h2 class="subheading">Components</h2>
+            <p class = "fo anim-typewriter line-1" id="intro" style="font-size : 55px">Intro</p>
+            <p class = "fo anim-typewriter line-1" style="font-size : 25px" >마냥 사납지만은 않지만 귀엽고 온순한 사자 한마리가 이 페이지를 작성함.</p>
+        <div>
+        </div>
+            <p class = "fo anim-typewriter line-1" style="font-size : 55px">나의 모든것..</p>
 
             <section class="component">
-                <h3 class="subheading" id="buttons">Buttons</h3>
-                <div style="padding-left: 20px;">
-                    <blockquote>
-                        A button is a rounded rectangle that is named with text. Clicking a button performs the action described by the button's name.
-                        <footer>&mdash; Apple HI Guidelines, p. 204</footer>
-                    </blockquote>
-
-                    <p>A standard button measures 59px wide and 20px tall. We use the <code>.btn</code> class for these buttons</p>
-
-                    <div class="example">
-                        <button class="btn">Cancel</button>
-                        <button class="btn">Submit</button>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span>&gt;</span>Submit<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-                        </details>
+                <p class="fo" style="font-size : 45px">학력</p>
+                <div class = "fo1" id="buttons" style="padding-left: 20px;">
+                    <div class="standard-dialog center scale-down" style="width:30rem;">
+                        <h1 class="fo1" style="font-size : 23px">목적 없는 공부는 기억에 해가 될 뿐이며, 머리 속에 들어온 어떤 것도 간직하지 못한다.</h1>
+                        <p class="dialog-text">-Leonardo da Vinci-</p>
                     </div>
-
-                    <p>When pressed, buttons invert. The button below is stimulated to be in the active state.</p>
-
-                    <div class="example">
-                        <button class="btn active">Active</button>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> &gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>Buttons can also have dynamic widths.</p>
-
-                    <div class="example">
-                        <button class="btn">Buttons can be long!!</button>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span>&gt;</span>Buttons can be long!!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>Or even have a default choice.</p>
-
-                    <div class="example">
-                        <button class="btn">Cancel</button>
-                        <button class="btn btn-default">Find</button>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn btn-default&quot;</span>&gt;</span>Find<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>Disabled buttons look the same as standard buttons, but with grey button text. Add the <code>disabled</code> attribute to use it.</p>
-
-                    <div class="example">
-                        <button class="btn" disabled>Disabled</button>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">disabled</span>&gt;</span>Disabled<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-
-                    <!--<p>Default buttons have an extra border around them. Add the <code>disabled</code> attribute to use it.</p>
-
-                    <div class="example">
-                      <span class="default">
-                        <button [[ class="btn"]]>Default</button>
-                      </span>
-                    </div> -->
+                    <p class = "fo2">~ 2016.02 이리마한초등학교 졸업</p>
+                    <p class = "fo2">~ 2019.02 익산어양중학교 졸업</p>
+                    <p class = "fo2" >~ 2022.02 익산성일고등학교 졸업</p>
+                    <p class = "fo2">~ 2022.03 한서대학교 항공소프트웨어공학과 입학</p>
+                    <p class = "fo2">~ 2024.02 한서대학교 항공소프트웨어공학과 2학년 수료후 휴학 ~ing</p>
+                    <p class = "fo2">~ 2024.04.15 스파르타 부트캠프 Java 스프링 백엔드 분야 수강중!</p>
                 </div>
 
 
             </section>
 
             <section class="component">
-                <h3 class="subheading" id="radio-buttons">Radio Buttons</h3>
-                <div style="padding-left: 20px;">
-                    <blockquote>
-                        A radio button is a Macintosh control that displays a setting, either on or off, and is part of a group in which only one button can be on at a time.
-                        <footer>&mdash; Apple HI Guidelines, p. 210</footer>
-                    </blockquote>
-
-                    <p>Radio Buttons can be rendered by specifying a <code>radio</code> type on an <code>input</code> tag and assigning it a name.</p>
-
+                <p class="fo" style="font-size : 45px">나의 목표</p>
+                <div id="radio-buttons" style="padding-left: 20px;">
                     <div class="example">
-                        <div class="field-row">
-                            <input id="radio1" type="radio" name="first-example">
-                            <label for="radio1">Left</label>
-                        </div>
-                        <div class="field-row">
-                            <input id="radio2" type="radio" name="first-example">
-                            <label for="radio2">Center</label>
-                        </div>
-                        <div class="field-row">
-                            <input id="radio3" type="radio" name="first-example">
-                            <label for="radio3">Right</label>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;first-example&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;radio1&quot;</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;first-example&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;radio2&quot;</span>&gt;</span>Center<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio3&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;first-example&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;radio3&quot;</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
+                        <p class="fo" style="font-size : 25px">솔직하게.. 목표란게 있을까.. 싶은 느낌.. 목표를 높게 잡으래서 실리콘밸리에서 잘나가는 개발자가 되고 싶다.. 적어놓으면 뭔가 애매한 포지션이라 다른 사람들이 하는 흔한 목표를 세웠다..</p>
+                        <p class="fo" style="font-size : 25px">흔히 말하는 돈 많은 백수를 단순히 개발자 입장에서 봤을 때 개발 안하는 개발자.. 요런 느낌? 이것이 바로 내 목표다..</p>
                     </div>
-
-
                 </div>
             </section>
 
             <section class="component">
-                <h3 class="subheading" id="checkboxes">Checkboxes</h3>
+                <p class="fo" style="font-size : 45px">취미 생활</p>
                 <div style="padding-left: 20px;">
-                    <blockquote>
-                        Checkboxes, like radio buttons, provide alternative choices for users. A
-                        checkbox is a square with label text next to it
-                        <footer>&mdash; Apple HI Guidelines, p. 211</footer>
-                    </blockquote>
-
-                    <p>Checkboxes can be rendered by specifying a <code>checkbox</code> type on an <code>input</code> tag and assigning it a name.</p>
-
-                    <div class="example">
-                        <div class="field-row">
-                            <input id="checkbox1" type="checkbox" name="chbx-example">
-                            <label for="checkbox1">Left</label>
+                    <div class="example" id="checkboxes">
+                        <div class="example">
+                            <div class = "fo">
+                                <img
+                                    src="../assets/images/yeogolf.jpg"
+                                    width="406"
+                                    height="721"
+                                    class="team-image"
+                                />
+                            <p class="fo" style="font-size : 35px">골프</p>
+                            <p class="fo" style="font-size : 25px">골린이.. 3개월차이지만 나름 양파 안까고,, 거리도 나름 나오는 수준까지 온 뉴비랄까요..? 빨리 돈벌고 개인채 장만하고 레슨받고,, 라운딩 가는게 꿈..</p>
                         </div>
-                        <div class="field-row">
-                            <input id="checkbox2" type="checkbox" name="chbx-example">
-                            <label for="checkbox2">Center</label>
                         </div>
-                        <div class="field-row">
-                            <input id="checkbox3" type="checkbox" name="chbx-example">
-                            <label for="checkbox3">Right</label>
+                        <div class="example">
+                            <div class = "fo">
+                                <img
+                                        src="../assets/images/yeoborling.jpg"
+                                        width="540"
+                                        height="720"
+                                        class="team-image"
+                                />
+                                <p class="fo" style="font-size : 35px">볼링</p>
+                                <p class="fo" style="font-size : 25px">진짜 치는 폼 보면 토나올 정도로 이상하게 치는데 점수는 정석대로 하는 애들보다 잘나옴.. 약간 지름길 하나 찾아서 먼저 도착하는 느낌..?</p>
+                            </div>
                         </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox1&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;chbx-example&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox1&quot;</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox2&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;chbx-example&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox2&quot;</span>&gt;</span>Center<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;checkbox3&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;checkbox&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;chbx-example&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;checkbox3&quot;</span>&gt;</span>Right<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
 
+                        <div class="example">
+                            <div class = "fo">
+                                <img
+                                        src="../assets/images/yeocookie.jpg"
+                                        width="720"
+                                        height="330"
+                                        class="team-image"
+                                />
+                                <p class="fo" style="font-size : 35px">쿠키런</p>
+                                <p class="fo" style="font-size : 25px">모바일 게임에 진심인 편이라 최고 티어는 찍어야 맘 놓고 겜을 놔줄 수 있게됨..</p>
+                            </div>
+                        </div>
 
-                </div>
-            </section>
+                        <div class="example">
+                            <div class = "fo">
+                                <img
+                                        src="../assets/images/yeorandom.jpg"
+                                        width="330"
+                                        height="721"
+                                        class="team-image"
+                                />
+                                <p class="fo" style="font-size : 35px">랜덤다이스</p>
+                                <p class="fo" style="font-size : 25px">위에서 말한 것처럼,, 최고 티어나 랭킹 박제는 해야 겜을 맘편하게 즐김.. 랭킹 1등 랜덤이가 접니다.. 헤헤 >_<</p>
+                            </div>
+                        </div>
 
+                        <div class="example">
+                            <div class = "fo">
+                                <img
+                                        src="../assets/images/yeokaraoke.jpg"
+                                        width="540"
+                                        height="720"
+                                        class="team-image"
+                                />
+                                <p class="fo" style="font-size : 35px">노래방</p>
+                                <p class="fo" style="font-size : 25px">조금..(?) 독특한 취향을 가지고 있어서 발라드 부르면서 노래 연습하는 것 보단 신나게 쳐노는거 좋아함..</p>
+                            </div>
+                        </div>
 
-            <section class="component">
-                <h3 class="subheading" id="menu-bar">Menu Bar</h3>
-                <div style="padding-left: 20px;">
-                    <blockquote>
-                        The menu bar extends across the top of the screen and contains words and
-                        icons that serve as the title of each menu
-                        <footer>&mdash; Apple HI Guidelines, p. 52</footer>
-                    </blockquote>
-
-                    <p>A menu bar consists of menu elements that name menu items and they typically have a dropdown menu associated with them.</p>
-
-                    <p>To create a menu bar we will use the <code>.menu-bar</code> class. </p>
-
-                    <div class="example">
-                        <ul role="menu-bar">
-                            <li role="menu-item" tabindex="0" aria-haspopup="true">
-                                File
-                                <ul role="menu">
-                                    <li role="menu-item"><a href="#menu">Action</a></li>
-                                    <li role="menu-item"><a href="#menu">Another Action</a></li>
-                                    <li role="menu-item" class="divider"><a href="#menu">Something else here</a></li>
-                                    <li role="menu-item"><a href="https://twitter.com/sakofchit">sakun's twitter</a></li>
-                                </ul>
-                            </li>
-                            <li role="menu-item" tabindex="0" aria-haspopup="true">
-                                Edit
-                                <ul role="menu">
-                                    <li role="menu-item"><a href="#menu">Action</a></li>
-                                    <li role="menu-item"><a href="#menu">Another Action</a></li>
-                                    <li role="menu-item" class="divider"><a href="#menu">Something else here</a></li>
-                                    <li role="menu-item"><a href="https://sakun.co">sakun's projects</a></li>
-                                </ul>
-                            </li>
-                            <li role="menu-item" tabindex="0" aria-haspopup="true">
-                                View
-                                <ul role="menu">
-                                    <li role="menu-item"><a href="#menu">Action</a></li>
-                                    <li role="menu-item"><a href="#menu">Another Action</a></li>
-                                    <li role="menu-item"><a href="#menu">Something else here</a></li>
-                                </ul>
-                            </li>
-                            <li role="menu-item" tabindex="0" aria-haspopup="true">
-                                Special
-                                <ul role="menu">
-                                    <li role="menu-item"><a href="#menu">You</a></li>
-                                    <li role="menu-item"><a href="#menu">Get the</a></li>
-                                    <li role="menu-item"><a href="#menu">Idea</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-bar&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
-    File
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Another Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://twitter.com/sakofchit&quot;</span>&gt;</span>sakun&#x27;s twitter<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
-    Edit
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Another Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://sakun.co&quot;</span>&gt;</span>sakun&#x27;s projects<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
-    View
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Another Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
-    Special
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>You<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Get the<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Idea<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>In case of a menu item as a single children or plain text with no menu dropdown associated with it, use <code>aria-haspopup="false"</code> attribute.</p>
-                    <div class="example">
-                        <ul role="menu-bar">
-                            <li role="menu-item" tabindex="0" aria-haspopup="false">Single Item</li>
-                            <li role="menu-item" tabindex="0" aria-haspopup="false"><a target="_blank" href="https://github.com/sakofchit/system.css">System.css on GitHub</a></li>
-                        </ul>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-bar&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span>Single Item<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;false&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">target</span>=<span class="hljs-string">&quot;_blank&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://github.com/sakofchit/system.css&quot;</span>&gt;</span>System.css on GitHub<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>We can also manipulate a menu bar into a standard dropdown.</p>
-
-                    <div class="example">
-                        <ul role="menu-bar">
-                            <li role="menu-item" tabindex="0" aria-haspopup="true">
-                                Dropdown
-                                <ul role="menu">
-                                    <li role="menu-item"><a href="#menu">Action</a></li>
-                                    <li role="menu-item"><a href="#menu">Another Action</a></li>
-                                    <li role="menu-item" class="divider"><a href="#menu">Something else here</a></li>
-                                    <li role="menu-item"><a href="https://twitter.com/sakofchit">sakun's twitter</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-bar&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">&quot;0&quot;</span> <span class="hljs-attr">aria-haspopup</span>=<span class="hljs-string">&quot;true&quot;</span>&gt;</span>
-    Dropdown
-    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Another Action<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;#menu&quot;</span>&gt;</span>Something else here<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">role</span>=<span class="hljs-string">&quot;menu-item&quot;</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://twitter.com/sakofchit&quot;</span>&gt;</span>sakun&#x27;s twitter<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
-                        </details>
+                        <div class="example">
+                            <div class = "fo">
+                                <img
+                                        src="../assets/images/yeopoket.jpg"
+                                        width="333"
+                                        height="720"
+                                        class="team-image"
+                                />
+                                <p class="fo" style="font-size : 35px">포켓몬 잡기</p>
+                                <p class="fo" style="font-size : 25px">포켓몬 잡는다고 말하면 매번 인기 지났다고 한소리씩 듣는 취미.. 그래도 나름 건강해질 수 있고 누워서 겜하는 것 보단 좋은 게임이라고 생각함..!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
 
             <section class="component">
-                <h3 class="subheading" id="select-menu">Select Menu</h3>
+                <p class="fo" style="font-size : 45px">먹을 거리</p>
                 <div style="padding-left: 20px;">
-                    <blockquote>
-                        A select menu can be used to create a drop-down list, typically used in forms.
-                    </blockquote>
+                    <div class="standard-dialog center scale-down" id = "menu-bar" style="width:30rem;">
+                        <h1 class="fo1" style="font-size : 30px">배고픈 자는 음식을 가리지 않는다.</h1>
+                        <p class="fo1" style="font-size : 25px">-맹자-</p>
+                    </div>
+                    <p class="fo" style="font-size : 35px">먹는 거 자체에 관심이 없는 내가 좋아하는 음식 TOP 5</p>
+                    <p>         </p>
+                    <div id="daumRoughmapContainer1713343944039" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander ({
+                            "timestamp" : "1713343944039",
+                            "key" : "2jzyg",
+                            "mapWidth" : "640",
+                            "mapHeight" : "360"
+                        }).render();
+                    </script>
+                    <p class="fo" style="font-size : 30px">태백 칼국수</p>
+                    <p class="fo" style="font-size : 20px">음.. 저희 동네는 음식이 다 맛있지만 유독 한달에 한번씩 무조건 생각나는 음식점?이랄까요..(?)</p>
 
-                    <p>Select menus can be rendered using the <code>select</code> and <code>option</code> elements.</p>
+                    <p>         </p>
+                    <div id="daumRoughmapContainer1713346207164" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1713346207164",
+                            "key" : "2jzyw",
+                            "mapWidth" : "640",
+                            "mapHeight" : "360"
+                        }).render();
+                    </script>
+                    <p class="fo" style="font-size : 30px">장원 막국수</p>
+                    <p class="fo" style="font-size : 20px">여기는 여름에 진짜 줄 서는 것만 한시간 넘게 줄서서라도 먹게되는 맛집..!!</p>
 
+                    <p>         </p>
+                    <div id="daumRoughmapContainer1713346426995" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1713346426995",
+                            "key" : "2j2zz",
+                            "mapWidth" : "640",
+                            "mapHeight" : "360"
+                        }).render();
+                    </script>
+                    <p class="fo" style="font-size : 30px">차돌식당</p>
+                    <p class="fo" style="font-size : 20px">뭔가 흔히 맛볼 수 없는걸 맛보고 싶다면 강추..(?)해드리는 맛집 들기름 막국수 시키면 차돌 꽁짜!</p>
+
+                    <p>         </p>
+                    <div id="daumRoughmapContainer1713348674920" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1713348674920",
+                            "key" : "2j2zd",
+                            "mapWidth" : "640",
+                            "mapHeight" : "360"
+                        }).render();
+                    </script>
+                    <p class="fo" style="font-size : 30px">청산류수</p>
+                    <p class="fo" style="font-size : 20px">고등학교때 급식이 맛없으면 담 넘어서 먹어서 그런지 이만한 국밥은 어디에도 없다고 보장 할 수 있는 국밥집</p>
+
+                    <p>         </p>
+                    <div id="daumRoughmapContainer1713348904434" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+                    <script charset="UTF-8">
+                        new daum.roughmap.Lander({
+                            "timestamp" : "1713348904434",
+                            "key" : "2j2zh",
+                            "mapWidth" : "640",
+                            "mapHeight" : "360"
+                        }).render();
+                    </script>
+                    <p class="fo" style="font-size : 30px">황등반점</p>
+                    <p class="fo" style="font-size : 20px">여기도 마찬가지로 고등학교 급식이 맛없거나, 한두번씩 활동 예산 떨어지면 그 범위내에서 코스로다가 푸짐하게 먹었던 기억이 나는 중국집..</p>
+
+
+                    <p class="fo" style="font-size : 20px">TMI.. 솔직히 적다보니 배고파진다.. 암튼 고딩때 담넘고 먹었던 음식은 하나부터 열까지 다 맛있었음.. ㅇㅈ?</p>
+                </div>
+            </section>
+
+
+            <section class="component">
+                <p class="fo" style="font-size : 45px">알바 해본거</p>
+                <div style="padding-left: 20px;" id = "select-menu">
+                    <p class="fo" style="font-size : 25px"></p>
                     <div class="example">
-                        <select>
-                            <option>name</option>
-                            <option>age</option>
-                            <option>date of birth</option>
+                        <select class="fo" id="selectbox" name="selectbox" onchange="chageLangSelect()">
+                            <option >태권도 사범</option>
+                            <option >OO갈비탕집</option>
+                            <option >서산 한남동그집</option>
+                            <option >서산 해미 롯데리아</option>
                         </select>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>name<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>age<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>date of birth<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></code></pre>
-                        </details>
                     </div>
-
-                    <p>By default the first option will be selected, but you can change that by adding the <code>selected</code> attribute to an <code>option</code></p>
-
-                    <div class="example">
-                        <select>
-                            <option>name</option>
-                            <option>age</option>
-                            <option selected>date of birth</option>
-                        </select>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">select</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>name<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">option</span>&gt;</span>age<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">option</span> <span class="hljs-attr">selected</span>&gt;</span>date of birth<span class="hljs-tag">&lt;/<span class="hljs-name">option</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">select</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
+                    <p id = "work" class="fo" style="font-size : 25px">애기들 좋아하는 편이라면,, 강추 드립니다..ㅎㅎ 살짝 힘빠질때도 많았지만 하다보면 익숙해져요 ㄹㅇ..</p>
                 </div>
             </section>
 
             <section class="component">
-                <h3 class="subheading" id="text-box">Text Box</h3>
-                <div style="padding-left: 20px;">
-                    <blockquote>
-                        The place or places in a dialog box where information can be typed. Also called text entry field.
-                        <footer>&mdash; Apple HI Guidelines, p. 372</footer>
-                    </blockquote>
-
-                    <p>Text Boxes can be rendered by specifying a <code>text</code> type on an <code>input</code> tag</p>
-
-                    <div class="example">
-                        <input aria-label="Example text box" type="text" placeholder="some cool text"/>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Example text box&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;some cool text&quot;</span>/&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>Other types of text are also supported</p>
-
-                    <div class="example">
-                        <form>
-                            <label for="text_email">Email</label><br>
-                            <input id="text_email" type="email" placeholder="panic@thedis.co"/><br>
-                            <label for="text_pwd">Password</label><br>
-                            <input id="text_pwd" type="password" placeholder="password"/><br><br>
-                        </form>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">form</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;text_email&quot;</span>&gt;</span>Email<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;text_email&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;email&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;panic@thedis.co&quot;</span>/&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;text_pwd&quot;</span>&gt;</span>Password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;text_pwd&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;password&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;password&quot;</span>/&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">form</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-
+                <p class="fo" style="font-size : 45px">인생 일대기</p>
+                <div class="example">
+                <p class="fo" style="font-size : 25px">2003년 04월 03일에 일본 후쿠오카현에 있는 산부인과에서 태어났다. 어머니가 일본분이시고 어머니와 아버지는 아버지의 유학 생활 중에 만나셨다고 한다.. 정확히는 모르지만 한 3살까지는 일본에서 살다가 아버지 직장 이슈로 인하여 한국에서 거주하며 초, 중, 고, 현재는 대학교도 한국에서 진학했지만 휴학하고 여기에서 공부중이다.
+                최근에 "선천적" 복수 국적을 유지하기 위해 한국에서 외국 국적 불이행 서약서를 제출하고 복수 국적을 유지하고 있다. 여기서는 막내 소리 듣지만 밖에서는 늙은이 소리를 들을 수도 있는 환경에서 생활하고 있다.. 알바해본 거 소개하는 쪽에서 태권도 사범을 했다고 적었는데 그 알바로 인하여 그쪽에서는 인생 선배.. 신세가 되어있는 존재..
+                다들 대학생활에 대한 로망을 품고 질문하는게 귀엽기만하다.. 정작나는 22년 동안 솔탈을 하지 못했는데.. ㅠㅠ 다들 술 마시는 것도 부러워하고 하지만,, 정작 저는 술을 못마시기도 하고 안마시기도 하는게 섞여서 그냥 술자리에 거의 안껴요.. 이게 가장 큰 이유일꺼 같다는 생각은 들지만,, 핑계라고 생각이 들면 어쩔 수 없구,, 술은 진짜
+                맛대가리도 없고,, 고등학교때부터 발병한 뇌전증이라는 병으로 인해서 담당 의사선생님이 술 마시지말라는데.. 나 자체가 술을 되게 싫어하고,, 의사 선생님까지 마시지 말래서 절대 안마쉼~!★ </p>
                 </div>
             </section>
-
-
-            <section class="component">
-                <h2 class="subheading" id="windows">Windows</h2>
-                <div style="padding-left: 20px;">
-                    <blockquote>
-                        Standard document windows have standard structural components.
-                        These components include the title bar, size box, close box, zoom box,
-                        and scroll bars. Windows are designed for visual consistency across all monitors
-                        <footer>&mdash; Apple HI Guidelines, p. 134, 159</footer>
-                    </blockquote>
-                </div>
-            </section>
-
-
-
-            <section class="component">
-                <h3 class="subheading" id="title-bar">Title Bar</h3>
-                <div style="padding-left: 20px;">
-
-                    <blockquote>
-                        A standard title bar is at least 19px tall, has a close button, caption, and racing stripes.
-                    </blockquote>
-
-                    <p>They're usually a part of a window. Title bars use the Chicago 12pt font.</p>
-
-                    <div class="example">
-                        <div class="window">
-                            <div class="title-bar">
-                                <button aria-label="Close" class="close"></button>
-                                <h1 class="title">A Title Bar</h1>
-                                <button aria-label="Resize" disabled class="hidden"></button>
-                            </div>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>A Title Bar<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>Title bars can look different depending on what they're intended for.</p>
-
-                    <div class="example">
-                        <div class="window">
-                            <div class="title-bar">
-                                <button aria-label="Close" class="close"></button>
-                                <h1 class="title">Also a Title Bar</h1>
-                                <button aria-label="Resize" class="resize"></button>
-                            </div>
-                        </div>
-                        <div class="window">
-                            <div class="title-bar">
-                                <h1 class="title">Dialog Title</h1>
-                            </div>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Also a Title Bar<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Dialog Title<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>You can also set a title bar to be inactive by applying the <code>.inactive-title-bar</code> class</p>
-
-                    <div class="example">
-                        <div class="window">
-                            <div class="inactive-title-bar">
-
-                                <h1 class="title">Inactive Title Bar</h1>
-
-                            </div>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inactive-title-bar&quot;</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Inactive Title Bar<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                </div>
-            </section>
-
-
-
-            <section class="component">
-                <h3 class="subheading" id="window-contents">Window Contents</h3>
-                <div style="padding-left: 20px;">
-
-                    <blockquote>
-                        Document windows present a view into the content that people create and store.
-                        <footer>&mdash; Apple HI Guidelines, p. 134</footer>
-                    </blockquote>
-
-                    <p>This is a window (without stuff in it). To create a basic window, we simply use the <code>.window</code> class.</p>
-
-                    <div class="example">
-                        <div class="window scale-down">
-                            <div class="title-bar">
-                                <button aria-label="Close" class="close"></button>
-                                <h1 class="title">Window Without Stuff</h1>
-                                <button aria-label="Resize" class="resize"></button>
-                            </div>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window scale-down&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Window Without Stuff<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-
-                    <p>This is a window with stuff in it. We can achieve this by simply adding a div with the <code>.window-pane</code> below the title bar.</p>
-
-                    <div class="example">
-                        <div class="window">
-                            <div class="title-bar">
-                                <button aria-label="Close" class="close"></button>
-                                <h1 class="title">Window With Stuff</h1>
-                                <button aria-label="Resize" class="resize"></button>
-                            </div>
-                            <div class="separator"></div>
-
-                            <div class="window-pane">
-                                Woo I got stuff in me!
-                            </div>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Window With Stuff<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window-pane&quot;</span>&gt;</span>
-    Woo I got stuff in me!
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-
-
-                    <p>You can also add a details bar to a window by adding<code>.details-bar</code> below the title bar.</p>
-
-                    <div class="example">
-                        <div class="window">
-                            <div class="title-bar">
-                                <button aria-label="Close" class="close"></button>
-                                <h1 class="title">Window With Details</h1>
-                                <button aria-label="Resize" class="resize"></button>
-                            </div>
-                            <div class="details-bar">
-                                <span>some</span>
-                                <span>more</span>
-                                <span>details</span>
-                            </div>
-
-                            <div class="window-pane">
-                                Woo I got a details bar.
-                            </div>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Window With Details<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;resize&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;details-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>some<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>more<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>details<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window-pane&quot;</span>&gt;</span>
-    Woo I got a details bar.
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>You can also create an inactive window using an inactive title bar.</p>
-
-                    <div class="example">
-                        <div class="window">
-                            <div class="inactive-title-bar">
-                                <h1 class="title">Inactive Window</h1>
-                            </div>
-                            <div class="details-bar">
-                                <span>some</span>
-                                <span>more</span>
-                                <span>details</span>
-                            </div>
-
-                            <div class="window-pane">
-                                not active :(
-                            </div>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inactive-title-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Inactive Window<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;details-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>some<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>more<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">span</span>&gt;</span>details<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window-pane&quot;</span>&gt;</span>
-    not active :(
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-
-                </div>
-            </section>
-
-            <section class="component">
-                <h3 class="subheading" id="dialogs">Dialogs</h3>
-                <div style="padding-left: 20px;">
-                    <blockquote>
-                        Dialog boxes are windows that provide a standard framework in which the
-                        computer can present alternatives from which the user can choose.
-                        <footer>&mdash; Apple HI Guidelines, p. 176</footer>
-                    </blockquote>
-
-                    <p>
-                        A basic dialog is just a box with text in it. We use the <code>.standard-dialog</code> class here.
-                    </p>
-
-                    <div class="example">
-                        <div class="standard-dialog center scale-down" style="width:30rem;">
-                            <h1 class="dialog-text">The Macintosh Finder, Version 1.0 (18 Jan 84)</h1>
-                            <p class="dialog-text">&copy; 1984 Apple Computer</p>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;standard-dialog center scale-down&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:30rem;&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-text&quot;</span>&gt;</span>The Macintosh Finder, Version 1.0 (18 Jan 84)<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dialog-text&quot;</span>&gt;</span><span class="hljs-symbol">&amp;copy;</span> 1984 Apple Computer<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>
-                        A modeless dialog box looks like a window without a size box, zoom box, or
-                        scroll bars.
-                    </p>
-
-                    <div class="example">
-                        <div class="window scale-down" style="width:30rem;">
-                            <div class="title-bar">
-                                <button aria-label="Close" class="close"></button>
-                                <h1 class="title">Modeless Dialog</h1>
-                                <button aria-label="Resize" disabled class="hidden"></button>
-                            </div>
-                            <div class="separator"></div>
-
-                            <div class="modeless-dialog">
-                                <section class="field-row" style="justify-content: flex-start">
-                                    <label for="text_find" class="modeless-text">Find:</label>
-                                    <input id="text_find" type="text" style="width:100%;" placeholder=""/>
-                                </section>
-                                <section class="field-row" style="justify-content: flex-end">
-                                    <button class="btn">Cancel</button>
-                                    <button class="btn" style="width:95px;">Find</button>
-                                </section>
-                            </div>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;window scale-down&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:30rem;&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title-bar&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Close&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;close&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>Modeless Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">aria-label</span>=<span class="hljs-string">&quot;Resize&quot;</span> <span class="hljs-attr">disabled</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;hidden&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;separator&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modeless-dialog&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;justify-content: flex-start&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;text_find&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modeless-text&quot;</span>&gt;</span>Find:<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;text_find&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:100%;&quot;</span> <span class="hljs-attr">placeholder</span>=<span class="hljs-string">&quot;&quot;</span>/&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;justify-content: flex-end&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:95px;&quot;</span>&gt;</span>Find<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-                    <p>
-                        We can also have a modal dialog box, which typically has some interactive component within it. It has a double-outline border. We achieve this by using a nested <code>div</code>. The outer <code>div</code> uses the <code>.outer-border</code> class and the <code>.inner-border</code> for the inner <code>div</code>.
-                    </p>
-
-                    <div class="example">
-                        <div class="modal-dialog outer-border" style="width: 30rem;">
-                            <div class="inner-border center">
-                                <div class="modal-contents">
-                                    <h1 class="modal-text">Modal Dialog</h1>
-                                    <div style="padding-left: 20px;">
-                                        <div class="field-row">
-                                            <input id="radio4" type="radio" name="second-example">
-                                            <label for="radio4">Room</label>
-                                        </div>
-                                        <div class="field-row">
-                                            <input id="radio5" type="radio" name="second-example">
-                                            <label for="radio5">For</label>
-                                        </div>
-                                        <div class="field-row">
-                                            <input id="radio6" type="radio" name="second-example">
-                                            <label for="radio6">Stuff</label>
-                                        </div>
-
-                                    </div>
-                                    <section class="field-row" style="justify-content: flex-end">
-                                        <button class="btn">Cancel</button>
-                                        <button class="btn" style="width:95px;">OK</button>
-                                    </section>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-dialog outer-border&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width: 30rem;&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner-border center&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-contents&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">h1</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;modal-text&quot;</span>&gt;</span>Modal Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;padding-left: 20px;&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio4&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;second-example&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;radio4&quot;</span>&gt;</span>Room<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio5&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;second-example&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;radio5&quot;</span>&gt;</span>For<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;radio6&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;radio&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;second-example&quot;</span>&gt;</span>
-          <span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">&quot;radio6&quot;</span>&gt;</span>Stuff<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
-        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;justify-content: flex-end&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:95px;&quot;</span>&gt;</span>OK<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-
-
-                    <blockquote>
-                        Alert boxes appear when the system software or an application needs to
-                        communicate information to the user. Alert boxes provide messages about
-                        error conditions and warn users about potentially hazardous situations or
-                        actions
-                        <footer>&mdash; Apple HI Guidelines, p. 176</footer>
-                    </blockquote>
-
-                    <p>Like modal dialogs, alert boxes also have a double-outline frame. The empty square is where you'd place an icon.</p>
-
-                    <div class="example">
-                        <div class="alert-box outer-border scale-down"  style="width:30rem;">
-                            <div class="inner-border">
-                                <div class="alert-contents" style="padding-left: 30px; padding-right:20px;">
-                                    <section class="field-row" style="justify-content: flex-start">
-                                        <div class="square"></div>
-                                        <p class="alert-text" style="padding-left:10px;">This is a standard alert box. The text would be placed here.
-                                            This is where more text appears</p>
-                                    </section>
-                                    <section class="field-row" style="justify-content: flex-end">
-                                        <button class="btn">Cancel</button>
-                                        <button class="btn" style="width:95px;">OK</button>
-                                    </section>
-
-                                </div>
-
-                            </div>
-                        </div>
-                        <details>
-                            <summary>Show code</summary>
-                            <pre><code><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;alert-box outer-border scale-down&quot;</span>  <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:30rem;&quot;</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;inner-border&quot;</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;alert-contents&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;padding-left: 30px; padding-right:20px;&quot;</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;justify-content: flex-start&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;square&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;alert-text&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;padding-left:10px;&quot;</span>&gt;</span>This is a standard alert box. The text would be placed here.
-          This is where more text appears<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-      <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;field-row&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;justify-content: flex-end&quot;</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;btn&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:95px;&quot;</span>&gt;</span>OK<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
-      <span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-
-    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-
-  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
-                        </details>
-                    </div>
-                </div>
-            </section>
-
-            <h2 class="subheading" id="contributing">Contributing, Credits, etc.</h2>
-
-            <section class="component">
-                <div>
-                    <p>Thanks for checking this project out! This library was made in good fun and was largely inspired by <a href="https://github.com/jdan/98.css" target="_blank">98.css</a>. The <a href="http://www.suppertime.co.uk/blogmywiki/2017/04/chicago/" target="_blank">Chicago 12pt</a> and <a href="http://www.suppertime.co.uk/blogmywiki/2017/04/finderskeepers/" target="_blank">Geneva 9pt</a> fonts are recreations by <a href="https://twitter.com/blogmywiki" target="_blank">@blogmywiki</a></p>
-
-                    <p>System.css is still in beta! There's a few things that are currently missing that I incline on adding pretty soon. I recreated components based on Apple's Human Interface Guidelines. However, there's still a pretty good chance that I've might've missed/overlooked something essential. I've also had to recreate most of the assets, which can also be found <a href="https://github.com/sakofchit/system.css/tree/main/icon">here</a>.</p>
-
-                    <p>If you find a bug, consider opening an issue <a href="https://github.com/sakofchit/system.css/issues">here</a>. If there's something that you'd like to add, please feel free to create a PR!</p>
-
-                    <p>If you'd like to see what else I'm up to, consider following me on <a href="https://twitter.com/sakofchit" target="_blank">Twitter</a> or checking out my <a href="https://sakun.co" target="_blank">personal site</a> :)</p>
-                </div>
-            </section>
-
-            <h2 class="subheading">Sponsors</h2>
-
-            <p><a href="https://getcssscan.com/?ref=systemcss" target="_blank">CSS Scan</a>: The fastest and easiest way to check, copy and edit CSS</p>
-
         </div>
     </div>
-    </p>
 </div>
 
 </body>
