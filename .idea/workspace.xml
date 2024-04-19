@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d3a8abf5-d42d-4b15-81b5-a22f3b7a3dc5" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/jaewon.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/jaewon.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/jy.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/jy.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/yeojae.html" beforeDir="false" afterPath="$PROJECT_DIR$/main/yeojae.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +89,7 @@
       <workItem from="1713323154532" duration="26010000" />
       <workItem from="1713361605140" duration="100000" />
       <workItem from="1713410794136" duration="14811000" />
-      <workItem from="1713511430025" duration="274000" />
+      <workItem from="1713511430025" duration="785000" />
     </task>
     <servers />
   </component>
