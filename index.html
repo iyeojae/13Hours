@@ -1,13 +1,318 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <script>
-        window.location.href = '../main/index.html';
-    </script>
-</head>
-<body>
+<html lang="en" data-bs-theme="auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>13시간이 모자라조</title>
 
-</body>
+    <link
+      rel="canonical"
+      href="https://getbootstrap.com/docs/5.3/examples/carousel/"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@docsearch/css@3"
+    />
+
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="carousel.css" rel="stylesheet" />
+
+    <script src="../assets/js/color-modes.js"></script>
+
+    <style>
+      .main {
+        margin-top: 100px;
+      }
+
+      .team-image {
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        width: 100%;
+        height: 3rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border: solid rgba(0, 0, 0, 0.15);
+        border-width: 1px 0;
+        box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+          inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -0.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .btn-bd-primary {
+        --bd-violet-bg: #712cf9;
+        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
+
+        --bs-btn-font-weight: 600;
+        --bs-btn-color: var(--bs-white);
+        --bs-btn-bg: var(--bd-violet-bg);
+        --bs-btn-border-color: var(--bd-violet-bg);
+        --bs-btn-hover-color: var(--bs-white);
+        --bs-btn-hover-bg: #6528e0;
+        --bs-btn-hover-border-color: #6528e0;
+        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+        --bs-btn-active-color: var(--bs-btn-hover-color);
+        --bs-btn-active-bg: #5a23c8;
+        --bs-btn-active-border-color: #5a23c8;
+      }
+
+      .bd-mode-toggle {
+        z-index: 1500;
+      }
+
+      .bd-mode-toggle .dropdown-menu .active .bi {
+        display: block !important;
+      }
+    </style>
+  </head>
+
+  <!-------------------------------------------------------------------------------------------------------->
+
+  <body>
+    <!-- 내비바 -->
+    <header data-bs-theme="dark">
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../main/index.html">
+            13시간이 모자라조
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <!-- 홈 -->
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="../main/index.html">Home</a>
+              </li>
+              <!-- 팀 노션 -->
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  target="_blank"
+                  href="https://teamsparta.notion.site/13-9282cc4b29f840dc8b1fe3eb52e6a733"
+                  >Team Notion</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- 팀원 개인 페이지 -->
+      <div class="container">
+        <div class="row text-center" style="width: 100%">
+          <!-- 팀장 -->
+          <div class="col-lg">
+            <img
+              src="../assets/images/yeojae.jpg"
+              width="140"
+              height="140"
+              class="team-image"
+            />
+            <h2>팀장</h2>
+            <p>이여재</p>
+            <p>
+              <a class="btn btn-secondary" href="../main/yeojae.html"
+                >자세히 &raquo;</a
+              >
+            </p>
+          </div>
+
+          <!-- 팀원1 -->
+          <div class="col-lg">
+            <img
+              src="../assets/images/유지영2.jpeg"
+              width="140"
+              height="140"
+              class="team-image"
+            />
+            <h2 class="fw-normal">과장</h2>
+            <p>유지영</p>
+            <p>
+              <a class="btn btn-secondary" href="../main/jy.html"
+                >자세히 &raquo;</a
+              >
+            </p>
+          </div>
+
+          <!-- 팀원2 -->
+          <div class="col-lg">
+            <img
+              src="../assets/images/unho.JPG"
+              width="140"
+              height="140"
+              class="team-image"
+            />
+            <h2 class="fw-normal">대리</h2>
+            <p>여운호</p>
+            <p>
+              <a class="btn btn-secondary" href="../main/unho.html"
+                >자세히 &raquo;</a
+              >
+            </p>
+          </div>
+
+          <!-- 팀원4 -->
+          <div class="col-lg">
+            <img
+              src="../assets/images/jaewon1.jpg"
+              width="140"
+              height="140"
+              class="team-image"
+            />
+            <h2 class="fw-normal">사원</h2>
+            <p>최재원</p>
+            <p>
+              <a class="btn btn-secondary" href="./jaewon.html"
+                >자세히 &raquo;</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- 팀원 자기 소개 -->
+        <hr class="featurette-divider" />
+
+        <!-- 팀장 -->
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              이여재
+              <span class="text-body-secondary">ENFP</span>
+            </h2>
+            <p class="lead">
+              한서대학교 항공소프트웨어공학과 3학년 휴학중이며, 전공자이지만
+              비전공자와 같은 수준의 코딩 실력을 가지고 있는 사납지만 귀여운
+              사자같은 사람이다.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img src="../assets/images/yeojae2.jpg" width="500" height="500" />
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+
+        <!-- 팀원1 -->
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+              유지영
+              <span class="text-body-secondary">ESTP</span>
+            </h2>
+            <p class="lead">
+              비전공자 말하는 감자. 신기하신가요? 신조는 일단 해보면 다 된다.
+              모든 닉네임을 유지영구라지로 통합할 원대한 계획을 가지고 있습니다.
+              커피, 위스키, 강아지, 체향이 향기로운 사람, 음악을 좋아합니다.
+              취미로 밴드와 버스킹을 합니다. 저와 좋아하는 것이 비슷하다면
+              미호를 외쳐!
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img src="../assets/images/유지영.jpeg" width="500" height="500" />
+          </div>
+        </div>
+        <hr class="featurette-divider" />
+
+        <!-- 팀원2 -->
+        <div class="row featurette">
+          <div class="col-md-7">
+            <h2 class="featurette-heading fw-normal lh-1">
+              여운호
+              <span class="text-body-secondary">ISFJ</span>
+            </h2>
+            <p class="lead">
+              철의 의지와 쿠쿠다스 신체를 지닌 개발자 지망생 보리 견주다. 산보단
+              바다, 여름보단 겨울, 부먹보단 찍먹, 펩시보단 코카, 완숙보단 반숙,
+              쌀떡보단 밀떡을 좋아한다. 취미는 옷, 사진, 음악.
+            </p>
+          </div>
+          <div class="col-md-5">
+            <img src="../assets/images/unho2.jpeg" width="500" height="500" />
+          </div>
+        </div>
+
+        <!-- 팀원3 -->
+        <hr class="featurette-divider" />
+        <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading fw-normal lh-1">
+              최재원
+              <span class="text-body-secondary">INFP</span>
+            </h2>
+            <p class="lead">
+              부경대학교 컴퓨터공학과를 졸업하고 개발자로 취업을 준비중인
+              최재원입니다. 취미는 게임, 영화, 등산하기 등 있습니다.
+            </p>
+          </div>
+          <div class="col-md-5 order-md-1">
+            <img width="500" height="500" src="../assets/images/jaewon2.jpg" />
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <footer class="container">
+        <p class="float-end"><a href="#">맨 위로</a></p>
+        <p>&copy; 2000–2024 Team Sparta Java 13, Inc.</p>
+      </footer>
+    </main>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
